@@ -24,10 +24,42 @@
 }
 
 #logo{
-  width: 700px;
-  height: 300px;
+  position: relative;
+  margin: auto;
+  width: 250px;
+  height: 250px;
+  background-image:url(https://s3.amazonaws.com/spoonflower/public/design_thumbnails/0227/0890/Football_pattern.ai_repeat_preview.png);
+  border-radius: 50%;
+  box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px #000;
+  animation:spin 30s linear alternate infinite;
+}
+
+@keyframes spin{
+100%{background-position:100%;}
+}
+
+#column1{
+  position: relative;
+}
+#column2{
+  position: relative;
 }
 
 #fixture_list{
   overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+#team_grid{
+  padding-top: 30px;
+}
+
+.image{
+  width: 120px;
+  height: 120px;
+}
+
+.standing_logos{
+  height: 30px;
+  width: 30px;
 }

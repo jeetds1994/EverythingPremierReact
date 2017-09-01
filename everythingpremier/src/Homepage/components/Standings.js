@@ -3,9 +3,18 @@ import Standing from './Standing'
 
 const Standings = ({standings}) => {
   return(
-    <div className="ui divided items">
-      {standings.map(standing => <Standing standing={standing}/>)};
-    </div>
+      <table className="ui celled padded table">
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Club</th>
+          <th>Played</th>
+          <th>Points</th>
+          <th>Goal Difference</th>
+        </tr>
+      </thead>
+        {standings.map((standing, index) => <Standing key={index} standing={standing}/>)};
+      </table>
   )
 }
 

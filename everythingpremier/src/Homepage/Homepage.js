@@ -20,7 +20,7 @@ class Homepage extends React.Component{
 
   logo = () => {
     return (
-      <img id="logo" src="https://i.pinimg.com/originals/83/90/0a/83900a5b6d403ddbfd4e843ea70828f4.jpg" alt="logo"/>
+      <div id='logo'></div>
     )
   }
 
@@ -29,16 +29,21 @@ class Homepage extends React.Component{
     return(
       <div className="ui four column grid">
         <div className="row">
-            <div className="column">
+            <div className="column four wide" id="column1">
               {/* Logo */}
               {this.logo()}
               {/* Standings */}
               <Standings standings={this.state.teamData}/>
               </div>
-              <div className="column">
+              <div className="column one wide"></div>
+              <div className="column eleven wide" id="column2">
                 {/* Fixtures */}
-                <Fixtures fixtures={this.state.teams}/>
-                <TeamGrid teams={this.state.teams}/>
+                <Fixtures fixtures={this.state.teamData}/>
+                {/* TeamGrid */}
+                <TeamGrid teams={this.state.teamData}/>
+              </div>
+              <div className="row">
+
               </div>
 
             <div className="column"></div>
