@@ -18,11 +18,6 @@ class Homepage extends React.Component{
       ,()=> console.log(this.state.teamData)))
   }
 
-  logo = () => {
-    return (
-      <div id='logo'></div>
-    )
-  }
 
 
   render(){
@@ -30,8 +25,10 @@ class Homepage extends React.Component{
       <div className="ui four column grid">
         <div className="row">
             <div className="column four wide" id="column1">
+
               {/* Logo */}
-              {this.logo()}
+              {this.props.logo()}
+              
               {/* Standings */}
               <Standings standings={this.state.teamData}/>
               </div>
