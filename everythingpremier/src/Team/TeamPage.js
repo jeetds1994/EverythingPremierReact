@@ -9,7 +9,8 @@ class TeamPage extends React.Component{
       pageID: 0,
       teamData: {},
       home_games: [],
-      away_games: []
+      away_games: [],
+      matches: []
     }
   }
 
@@ -22,7 +23,8 @@ class TeamPage extends React.Component{
         pageID: pageID,
         teamData: teamData.team,
         home_games: teamData.home_games,
-        away_games: teamData.away_games
+        away_games: teamData.away_games,
+        matches: teamData.matches
       }, () => console.log(this.state))
     })
   }
@@ -39,7 +41,8 @@ class TeamPage extends React.Component{
             <div className="column one wide"></div>
 
             <div className="column five wide" id="column2">
-              <Matches home_games={this.state.home_games} away_games={this.state.away_games}/>
+              <Matches home_games={this.state.home_games} away_games={this.state.away_games} matches={this.state.matches}/>
+              <p>hello</p>
             </div>
             <div className="row">
 
