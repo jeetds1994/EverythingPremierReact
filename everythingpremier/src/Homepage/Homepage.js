@@ -7,15 +7,25 @@ class Homepage extends React.Component{
   constructor(){
     super()
     this.state = {
-      teamData: []
+      teamData: [],
+      fixtures: []
     }
   }
 
   componentDidMount(){
     fetch('http://localhost:3000/teams')
     .then(resp => resp.json())
-    .then(teamData => this.setState({ teamData }
-      ,()=> console.log(this.state.teamData)))
+    .then(teamData => this.setState({ teamData },
+    () => fetch('http://localhost:3000/fixtures')
+    .then(resp => resp.json())
+    .then(fixtures => {
+      let teamData = this.state.teamData
+      fixtures.map(fixture => {
+	       fixture["hometeam"] = teamData.find(team => team.id === parseInt(fixture.home_team_id)).name
+	        fixture["awayteam"] = teamData.find(team => team.id === parseInt(fixture.away_team_id)).name
+	     return fixture})
+      this.setState({ fixtures}
+    ,() => console.log(this.state.fixtures))})))
   }
 
 
@@ -25,17 +35,13 @@ class Homepage extends React.Component{
       <div className="ui four column grid">
         <div className="row">
             <div className="column four wide" id="column1">
-
-              {/* Logo */}
-              {this.props.logo()}
-              
               {/* Standings */}
               <Standings standings={this.state.teamData}/>
               </div>
               <div className="column one wide"></div>
               <div className="column eleven wide" id="column2">
                 {/* Fixtures */}
-                <Fixtures fixtures={this.state.teamData}/>
+                <Fixtures teamData={this.state.teamData} fixtures={this.state.fixtures}/>
                 {/* TeamGrid */}
                 <TeamGrid teams={this.state.teamData}/>
               </div>

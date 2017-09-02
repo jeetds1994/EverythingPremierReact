@@ -1,6 +1,7 @@
 import React from 'react'
 import TeamInfo from './components/TeamInfo'
-import Matches from './components/Matches'
+import Matches from './components/Fixtures'
+import Players from './components/Players'
 
 class TeamPage extends React.Component{
   constructor(){
@@ -10,7 +11,8 @@ class TeamPage extends React.Component{
       teamData: {},
       home_games: [],
       away_games: [],
-      matches: []
+      matches: [],
+      players: []
     }
   }
 
@@ -24,31 +26,36 @@ class TeamPage extends React.Component{
         teamData: teamData.team,
         home_games: teamData.home_games,
         away_games: teamData.away_games,
-        matches: teamData.matches
+        matches: teamData.matches,
+        players: teamData.players
       }, () => console.log(this.state))
     })
   }
 
   render(){
     return(
-      <div className="ui four column grid">
+      <div>
         <div className="row">
             <div className="column four wide" id="column1">
-              <img src={this.state.teamData.image_url} alt={this.state.teamData.name}/>
-              <TeamInfo teamName={this.state.teamData.name} bio={this.state.teamData.bio}/>
+            <img src={this.state.teamData.image_url} alt={this.state.teamData.name}/>
+            <TeamInfo teamName={this.state.teamData.name} bio={this.state.teamData.bio}/>
             </div>
 
-            <div className="column one wide"></div>
+            <div className="column one wide">
+
+
+            </div>
 
             <div className="column five wide" id="column2">
               <Matches home_games={this.state.home_games} away_games={this.state.away_games} matches={this.state.matches}/>
-              <p>hello</p>
             </div>
             <div className="row">
 
             </div>
 
-          <div className="column"></div>
+          <div className="column">
+            <Players players={this.state.players}/>
+          </div>
         </div>
       </div>
     )

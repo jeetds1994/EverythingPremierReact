@@ -1,12 +1,13 @@
 import React from 'react'
 import { Card } from 'semantic-ui-react'
 
-const Fixture = ({fixture}) => {
+
+const Fixture = ({match}) => {
   return(
     <div>
       <Card>
         <Card.Content
-          header={fixture.hometeam + " vs " + fixture.awayteam  }
+          header='Elliot Baker'
           meta='Friend'
           description='Elliot is a music producer living in Chicago.'
         />
@@ -15,4 +16,4 @@ const Fixture = ({fixture}) => {
   )
 }
 
-export default Fixture;
+export default Fixture
