@@ -21,7 +21,7 @@ class PlayerPage extends React.Component{
         pageID: pageID,
         player: data.player,
         stats: data.stats
-      }, () => console.log(this.state))
+      })
     })
 
   }

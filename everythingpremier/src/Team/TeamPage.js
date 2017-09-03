@@ -34,7 +34,7 @@ class TeamPage extends React.Component{
 
   render(){
     return(
-      <div>
+      <div className="ui four column grid">
         <div className="row">
             <div className="column four wide" id="column1">
             <img src={this.state.teamData.image_url} alt={this.state.teamData.name}/>

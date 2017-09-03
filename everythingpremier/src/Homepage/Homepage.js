@@ -21,8 +21,10 @@ class Homepage extends React.Component{
     .then(fixtures => {
       let teamData = this.state.teamData
       fixtures.map(fixture => {
-	       fixture["hometeam"] = teamData.find(team => team.id === parseInt(fixture.home_team_id)).name
-	        fixture["awayteam"] = teamData.find(team => team.id === parseInt(fixture.away_team_id)).name
+	       fixture["hometeam"] = teamData.find(team => team.id === parseInt(fixture.home_team_id, 10)).name
+	        fixture["awayteam"] = teamData.find(team => team.id === parseInt(fixture.away_team_id, 10)).name
+          fixture["hometeamimage"] = teamData.find(team => team.id === parseInt(fixture.home_team_id, 10)).image_url
+ 	        fixture["awayteamimage"] = teamData.find(team => team.id === parseInt(fixture.away_team_id, 10)).image_url
 	     return fixture})
       this.setState({ fixtures}
     ,() => console.log(this.state.fixtures))})))

@@ -18,6 +18,34 @@
   font-size: large;
 }
 
+.parallax {
+    /* The image used */
+    background-image: url("http://nepeanhotspurs.ca/wp-content/uploads/2015/01/field.jpg");
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logo{
+  padding-top: 175px;
+  padding-bottom: 10px;
+  height: 50%;
+  width: 50%;
+}
+
+#mission{
+  padding-top: 300px;
+  color: white;
+  font-style: italic;
+}
+
+
 #column1{
   position: relative;
 }
@@ -44,15 +72,15 @@
   width: 30px;
 }
 
-#logo{
-  padding-top: 20px;
-  padding-bottom: 10px;
-  height: 50%;
-  width: 50%;
-}
+
 #team_tile_image{
   height: 100px;
   width: 100px;
+}
+
+#fixtureimage{
+  height: 30px;
+  width: 30px;
 }
 
 .ui.card{
