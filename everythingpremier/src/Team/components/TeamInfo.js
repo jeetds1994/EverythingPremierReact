@@ -1,10 +1,11 @@
 import React from 'react'
 
 const TeamInfo = ({teamName, bio}) => {
+  console.log(bio)
   return(
-    <div>
+    <div id="teambio">
       <h1>About {teamName}</h1>
-      <p>{bio}</p>
+      <h3>{bio}</h3>
     </div>
   )
 }

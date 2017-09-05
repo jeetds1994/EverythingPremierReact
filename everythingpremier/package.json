@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "dimple": "git+https://github.com/PMSI-AlignAlytics/dimple.git",
+    "get-image-colors": "^1.8.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-parallax": "^1.4.4",

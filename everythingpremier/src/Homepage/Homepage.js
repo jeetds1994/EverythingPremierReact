@@ -34,9 +34,22 @@ class Homepage extends React.Component{
 
   render(){
     return(
+      <div id="intro">
+
+          <div id="content">
+            <img id="background" src="/field.jpg" alt="home"/>
+            <img id="logo" src="/logo_white.svg" alt="logo"/>
+            <h1 id="motto">For quick info about the Barclays Premier League.</h1>
+            <input id="search" type="text" placeholder="Search here..."/>
+          <div>
+
+          </div>
+        </div>
+
+
       <div className="ui four column grid">
         <div className="row">
-            <div className="column four wide" id="column1">
+            <div className="column four wide" id="column1home">
               {/* Standings */}
               <Standings standings={this.state.teamData}/>
               </div>
@@ -54,6 +67,7 @@ class Homepage extends React.Component{
             <div className="column"></div>
         </div>
       </div>
+    </div>
     )
   }
 }

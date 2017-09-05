@@ -3,6 +3,7 @@ import TeamInfo from './components/TeamInfo'
 import Matches from './components/Fixtures'
 import Players from './components/Players'
 
+
 class TeamPage extends React.Component{
   constructor(){
     super()
@@ -39,11 +40,11 @@ class TeamPage extends React.Component{
 
   render(){
     return(
+      <div id="teamPage">
       <div className="ui four column grid">
         <div className="row">
-            <div className="column four wide" id="column1">
-            <img src={this.state.teamData.image_url} alt={this.state.teamData.name}/>
-            <TeamInfo teamName={this.state.teamData.name} bio={this.state.teamData.bio}/>
+            <div className="column four wide" id="column1team">
+            <img id="teamLogo" src={this.state.teamData.image_url} alt={this.state.teamData.name}/>
             </div>
 
             <div className="column one wide">
@@ -51,17 +52,19 @@ class TeamPage extends React.Component{
 
             </div>
 
-            <div className="column five wide" id="column2">
-              <Matches home_games={this.state.home_games} away_games={this.state.away_games} matches={this.state.matches}/>
+            <div className="column ten wide">
+            <TeamInfo teamName={this.state.teamData.name} bio={this.state.teamData.bio}/>
             </div>
             <div className="row">
 
+            <Matches home_games={this.state.home_games} away_games={this.state.away_games} matches={this.state.matches}/>
             </div>
 
           <div className="column">
             <Players players={this.state.players}/>
           </div>
         </div>
+      </div>
       </div>
     )
   }

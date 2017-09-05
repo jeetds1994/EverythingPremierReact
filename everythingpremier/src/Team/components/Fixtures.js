@@ -11,7 +11,7 @@ const Fixtures = ({home_games, away_games, matches}) => {
     <div className="ui horiztonal menu" id="fixture_list">
     <Card.Group>
       {listOfMatches}
-      </Card.Group>
+    </Card.Group>
 
     </div>
   )

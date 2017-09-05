@@ -26,10 +26,10 @@ class App extends Component {
       <Router>
         <div>
 
-       <Route exact path="/" render={() => <Homepage />} />
-        <Route path="/teams" render={() => <TeamPage />} />
-        <Route path="/players" render={() => <PlayerPage />} />
-        </div>
+          <Route exact path="/" render={() => <Homepage />} />
+          <Route path="/teams" render={() => <TeamPage />} />
+          <Route path="/players" render={() => <PlayerPage />} />
+       </div>
       </Router>
       </div>
     );

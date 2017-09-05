@@ -18,39 +18,72 @@
   font-size: large;
 }
 
-.parallax {
-    /* The image used */
-    background-image: url("http://nepeanhotspurs.ca/wp-content/uploads/2015/01/field.jpg");
-
-    /* Set a specific height */
-    height: 100%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#content{
+    display: flex;
+    justify-content: center;
+    overflow: hidden
 }
 
 #logo{
-  padding-top: 175px;
-  padding-bottom: 10px;
-  height: 50%;
-  width: 50%;
+  position: absolute;
+  padding-top: 270px;
 }
 
-#mission{
-  padding-top: 300px;
-  color: white;
+#background{
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%
+}
+
+#search{
+  position: absolute;
+  padding-top: 700px;
+  color: #ccc;
+  text-shadow: none;
+  -webkit-text-fill-color: initial;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  font-size:30pt;
+  text-align: center;
+}
+
+#motto{
+  font-weight: bold;
   font-style: italic;
+  color: white;
+  position: absolute;
+  padding-top: 540px;
 }
 
 
-#column1{
+#column1home{
   position: relative;
 }
 #column2{
   position: relative;
+}
+
+#teamPage{
+  background: gray;
+}
+
+
+
+#teambio{
+  width: 100%;
+  text-align: center;
+}
+
+#column2team:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+#teamLogo{
+  height: 400px;
+  width: 400px;
 }
 
 #fixture_list{
