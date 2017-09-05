@@ -13,7 +13,9 @@ class PlayerPage extends React.Component{
   }
 
   componentDidMount(){
-    let pageID = parseInt(window.location.href.replace("http://localhost:3001/players/", ""), 10) //the 10 is base number system
+    let pageID = window.location.href.replace("http://localhost:3001/players/", "") //the 10 is base number system
+    if(window.location.href.includes("http://localhost:3001/players/")){
+
     let url = "http://localhost:3000/players/" + pageID
     fetch(url).then(resp => resp.json())
     .then(data => {
@@ -23,8 +25,11 @@ class PlayerPage extends React.Component{
         stats: data.stats
       })
     })
-
+    }else{
+      window.location = "http://localhost:3001"
+    }
   }
+
   render(){
     return(
       <div className="ui four column grid">

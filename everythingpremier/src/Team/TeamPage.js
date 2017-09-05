@@ -17,7 +17,9 @@ class TeamPage extends React.Component{
   }
 
   componentDidMount(){
-    let pageID = parseInt(window.location.href.replace("http://localhost:3001/teams/", ""), 10) //the 10 is base number system
+    let pageID = window.location.href.replace("http://localhost:3001/teams/", "") //the 10 is base number system
+    if(window.location.href.includes("http://localhost:3001/teams/")){
+
     let url = "http://localhost:3000/teams/" + pageID
     fetch(url).then(resp => resp.json())
     .then(teamData => {
@@ -30,6 +32,9 @@ class TeamPage extends React.Component{
         players: teamData.players
       }, () => console.log(this.state))
     })
+  }else{
+    window.location = "http://localhost:3001"
+  }
   }
 
   render(){
