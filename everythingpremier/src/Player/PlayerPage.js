@@ -42,7 +42,7 @@ class PlayerPage extends React.Component{
 
             </div>
 
-          <div className="column">
+          <div className="column" id="stats">
             <Stats stats={this.state.stats}/>
           </div>
         </div>

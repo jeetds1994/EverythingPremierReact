@@ -86,3 +86,8 @@
 .ui.card{
   align-items: center;
 }
+#stats{
+  width: 700px;
+  top: 0;
+  right: 0;
+}
