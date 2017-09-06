@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 import './App.css';
 
-import Homepage from './Homepage/Homepage'
+import Homepage from './Homepage/Homepage';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import TeamPage from './Team/TeamPage'
-import PlayerPage from './Player/PlayerPage'
-import LandingPage from './LandingPage/LandingPage'
+import TeamPage from './Team/TeamPage';
+import PlayerPage from './Player/PlayerPage';
+import LandingPage from './LandingPage/LandingPage';
 
 
 
