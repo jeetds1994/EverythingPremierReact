@@ -2,6 +2,7 @@ import React from 'react'
 import Fixtures from './components/Fixtures'
 import Standings from './components/Standings'
 import TeamGrid from './components/TeamGrid'
+import Search from './components/Search'
 
 class Homepage extends React.Component{
   constructor(){
@@ -40,7 +41,7 @@ class Homepage extends React.Component{
             <img id="background" src="/field.jpg" alt="home"/>
             <img id="logo" src="/logo_white.svg" alt="logo"/>
             <h1 id="motto">For quick info about the Barclays Premier League.</h1>
-            <input id="search" type="text" placeholder="Search here..."/>
+            <Search teamData={this.state.teamData}/>
           <div>
 
           </div>

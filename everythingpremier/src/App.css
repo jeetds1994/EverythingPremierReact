@@ -48,19 +48,6 @@
   text-align: center;
 }
 
-#teamBackground{
-  width: 100%;
-}
-
-#filter{
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-  position: absolute;
-}
-
 #motto{
   font-weight: bold;
   font-style: italic;
@@ -69,7 +56,21 @@
   padding-top: 540px;
 }
 
+#view1{
+  background-color: black;
+  min-height:900px;
+}
 
+#view2{
+  min-height:900px;
+  background-color: blue;
+}
+
+
+#surroundContainer{
+  height: 100%;
+
+}
 
 
 #column1home{
@@ -97,8 +98,19 @@
 }
 
 #teamLogo{
-  height: 400px;
-  width: 400px;
+  height: 700px;
+  width: 700px;
+}
+
+#bio{
+  color: white;
+}
+
+#matchDetails{
+  color: white;
+  font-size: 30px;
+  vertical-align: middle;
+  margin: auto;
 }
 
 #fixture_list{
@@ -127,14 +139,14 @@
 }
 
 #fixturehomeimage{
-  top: 0;
-  left: 0;
-  height: 30px;
-  width: 30px;
+  margin: auto;
+  height: 350px;
+  width: 350px;
 }
 #fixtureawayimage{
-  height: 30px;
-  width: 30px;
+  margin: auto;
+  height: 350px;
+  width: 350px;
 }
 
 #matchesTile{

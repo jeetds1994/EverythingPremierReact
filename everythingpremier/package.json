@@ -5,6 +5,7 @@
   "dependencies": {
     "dimple": "git+https://github.com/PMSI-AlignAlytics/dimple.git",
     "react": "^15.6.1",
+    "react-autosuggest": "^9.3.2",
     "react-dom": "^15.6.1",
     "react-parallax": "^1.4.4",
     "react-player": "^0.22.0",

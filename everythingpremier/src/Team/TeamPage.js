@@ -62,47 +62,68 @@ class TeamPage extends React.Component{
       <div id="teamPage">
 
 
-      <div id="filter">
-      <div >
-        <img id="teamBackground" src="/field.jpg" alt="home"/>
-      </div>
-    </div>
+          <div id="surroundContainer">
+            <div id="view1">
+              <div className="ui two column grid">
 
+                <div className="column eight wide">
+                  <img id="teamLogo" src={this.state.teamData.image_url} alt={this.state.teamData.name}/>
+                </div>
 
-      <div className="ui four column grid">
-        <div className="row1team">
-            <div className="column four wide">
-            <img id="teamLogo" src={this.state.teamData.image_url} alt={this.state.teamData.name}/>
+                <div className="column eight wide">
+                  <TeamInfo teamName={this.state.teamData.name} bio={this.state.teamData.bio}/>
+                </div>
+
+              </div>
             </div>
 
-            <div className="column one wide">
+            <div id="view2">
 
-
-            </div>
-
-            <div className="column ten wide">
-            <TeamInfo teamName={this.state.teamData.name} bio={this.state.teamData.bio}/>
-
-
-            <Matches home_games={this.state.home_games} away_games={this.state.away_games} matches={this.state.matches}/>
-            </div>
-
-            <Goals videos={this.state.videos} />
-            <div className="row">
-
+              <Matches home_games={this.state.home_games} away_games={this.state.away_games} matches={this.state.matches}/>
 
             </div>
-
-          <div className="column">
-            <Players players={this.state.players}/>
 
 
           </div>
-        </div>
-      </div>
+
+
+
       </div>
     )
   }
 }
 
 export default TeamPage
+
+//
+// <div className="ui four column grid">
+//   <div className="row1team">
+//       <div className="column four wide">
+//       <img id="teamLogo" src={this.state.teamData.image_url} alt={this.state.teamData.name}/>
+//       </div>
+//
+//       <div className="column one wide">
+//
+//
+//       </div>
+//
+//       <div className="column ten wide">
+//       <TeamInfo teamName={this.state.teamData.name} bio={this.state.teamData.bio}/>
+//
+//
+//       <Matches home_games={this.state.home_games} away_games={this.state.away_games} matches={this.state.matches}/>
+//       </div>
+//
+//       <Goals videos={this.state.videos} />
+//       <div className="row">
+//
+//
+//       </div>
+//
+//     <div className="column">
+//       <Players players={this.state.players}/>
+//
+//
+//     </div>
+//   </div>
+// </div>

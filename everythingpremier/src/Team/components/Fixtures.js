@@ -7,7 +7,7 @@ const settings = {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
+      slidesToShow: 1,
       slidesToScroll: 3,
       autoplay: true,
       autoplaySpeed: 2000,
@@ -22,14 +22,30 @@ const Fixtures = ({home_games, away_games, matches}) => {
   let listOfMatches = matches.map((match, index) => {
     return(
       <div id="matchesTile">
-          <img id="fixturehomeimage" src={match.hometeamimage}/> vs <img id="fixtureawayimage" src={match.awayteamimage}/>
-        <h1>{match.id}</h1>
+      <div className="ui two column grid">
+        <div className="column seven wide">
+          <img id="fixturehomeimage" src={match.hometeamimage}/>
+          <h2>{match.hometeam}</h2>
+        </div>
+
+        <div className="column two wide" id="matchDetails">
+          <p>vs</p>
+          <p>{match.date_time}</p>
+        </div>
+
+        <div className="column seven wide">
+          <img id="fixtureawayimage" src={match.awayteamimage}/>
+          <h2>{match.awayteam}</h2>
+        </div>
+      </div>
       </div>
     )
   })
 
+
   return(
     <div>
+      <h1>Matches:</h1>
       <Slider {...settings}>
         {listOfMatches}
       </Slider>
