@@ -96,36 +96,3 @@ class TeamPage extends React.Component{
 }
 
 export default TeamPage
-
-//
-// <div className="ui four column grid">
-//   <div className="row1team">
-//       <div className="column four wide">
-//       <img id="teamLogo" src={this.state.teamData.image_url} alt={this.state.teamData.name}/>
-//       </div>
-//
-//       <div className="column one wide">
-//
-//
-//       </div>
-//
-//       <div className="column ten wide">
-//       <TeamInfo teamName={this.state.teamData.name} bio={this.state.teamData.bio}/>
-//
-//
-//       <Matches home_games={this.state.home_games} away_games={this.state.away_games} matches={this.state.matches}/>
-//       </div>
-//
-//       <Goals videos={this.state.videos} />
-//       <div className="row">
-//
-//
-//       </div>
-//
-//     <div className="column">
-//       <Players players={this.state.players}/>
-//
-//
-//     </div>
-//   </div>
-// </div>

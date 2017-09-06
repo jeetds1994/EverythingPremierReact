@@ -78,6 +78,11 @@
   height: 100%;
 }
 
+#playerview1{
+  background-color: black;
+  min-height:600px;
+}
+
 #column1home{
   position: relative;
 }
@@ -100,6 +105,11 @@
 #teamLogo{
   height: 700px;
   width: 700px;
+}
+
+#playerview2{
+  color: black;
+  background-color: white;
 }
 
 #bio{

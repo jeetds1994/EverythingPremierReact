@@ -6,12 +6,6 @@ import dimple from 'dimple';
 
 class Stats extends React.Component{
 
-
-  filterRes = (key, value) => {
-
-
-  }
-
   componentWillReceiveProps(nextProps){
 
       let objKeys = Object.keys(nextProps.stats)

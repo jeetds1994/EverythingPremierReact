@@ -6,7 +6,6 @@ import Homepage from './Homepage/Homepage';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import TeamPage from './Team/TeamPage';
 import PlayerPage from './Player/PlayerPage';
-import LandingPage from './LandingPage/LandingPage';
 
 
 

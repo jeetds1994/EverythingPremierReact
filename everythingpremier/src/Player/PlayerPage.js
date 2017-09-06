@@ -32,27 +32,50 @@ class PlayerPage extends React.Component{
 
   render(){
     return(
-      <div className="ui four column grid">
-        <div className="row">
-            <div className="column four wide" id="column1">
-              <PlayerInfo player={this.state.player}/>
+      <div id="playerPage">
+          <div id="surroundContainer">
+            <div id="playerview1">
+              <div className="ui two column grid">
+                <div className="column eight wide">
+                  <img src={this.state.player.image_url} alt={this.state.player.name}/>
+                </div>
+                <div className="column eight wide">
+                  <h1 id="bio"  >{this.state.player.bio}</h1>
+                </div>
+              </div>
             </div>
 
-            <div className="column one wide"></div>
-
-            <div className="column five wide" id="column2">
-              <h1>{this.state.player.name}</h1>
-            </div>
-            <div className="row">
-
+            <div id="playerview2">
+              <Stats stats={this.state.stats}/>
             </div>
 
-          <div className="column" id="stats">
-            <Stats stats={this.state.stats}/>
+
           </div>
-        </div>
+
+
+
       </div>
     )
   }
 }
 export default PlayerPage
+
+
+// <div className="row">
+//     <div className="column four wide" id="column1">
+//       <PlayerInfo player={this.state.player}/>
+//     </div>
+//
+//     <div className="column one wide"></div>
+//
+//     <div className="column five wide" id="column2">
+//       <h1>{this.state.player.name}</h1>
+//     </div>
+//     <div className="row">
+//
+//     </div>
+//
+//   <div className="column" id="stats">
+//     <Stats stats={this.state.stats}/>
+//   </div>
+// </div>
