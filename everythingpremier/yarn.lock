@@ -2095,6 +2095,10 @@ dimple-js@^2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/dimple-js/-/dimple-js-2.1.4.tgz#69f84f2b226947fa3ad8f4b766339facc3e3c431"
 
+"dimple@git+https://github.com/PMSI-AlignAlytics/dimple.git":
+  version "2.3.0"
+  resolved "git+https://github.com/PMSI-AlignAlytics/dimple.git#65f69857f5e64f3a49f0898fa00799a530607a41"
+
 dns-equal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/dns-equal/-/dns-equal-1.0.0.tgz#b39e7f1da6eb0a75ba9c17324b34753c47e0654d"

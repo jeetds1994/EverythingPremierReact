@@ -1,7 +1,7 @@
 import React from 'react';
 import * as d3 from "d3";
 
-import dimple from 'dimple';
+import * as dimple from 'dimple';
 
 
 class Stats extends React.Component{

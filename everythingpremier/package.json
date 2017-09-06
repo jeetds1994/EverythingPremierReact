@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "d3": "^4.10.2",
+    "dimple": "git+https://github.com/PMSI-AlignAlytics/dimple.git",
     "dimple-js": "^2.1.4",
     "react": "^15.6.1",
     "react-autosuggest": "^9.3.2",
