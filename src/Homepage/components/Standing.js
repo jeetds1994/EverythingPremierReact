@@ -4,7 +4,7 @@ const Standing = ({standing}) => {
   console.log(standing)
   var find = ' ';
   var re = new RegExp(find, 'g');
-  let url = "https://everythingpremierapi.herokuapp.com/teams/" + standing.name.toLowerCase().replace(re, '');
+  let url = "https://everythingpremier.herokuapp.com/teams/" + standing.name.toLowerCase().replace(re, '');
 
 
   return(
