@@ -7,7 +7,7 @@ const TeamTile = ({team}) => {
 
   var find = ' ';
   var re = new RegExp(find, 'g');
-  let url = "http://localhost:3001/teams/" + team.name.toLowerCase().replace(re, '');
+  let url = "https://everythingpremierapi.herokuapp.com/teams/" + team.name.toLowerCase().replace(re, '');
 
   return(
     <Card>

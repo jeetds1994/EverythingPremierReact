@@ -5,7 +5,7 @@ import Autosuggest from 'react-autosuggest';
 // based on the clicked suggestion. Teach Autosuggest how to calculate the
 // input value for every given suggestion.
 const getSuggestionValue = suggestion => {
-  window.location = "http://localhost:3001/teams/" + suggestion.id
+  window.location = "https://everythingpremier.herokuapp.com/teams/" + suggestion.id
 };
 
 // Use your imagination to render suggestions.

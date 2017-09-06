@@ -153,10 +153,21 @@
 
 #fixturehomeimage{
   margin: auto;
+  height: 35px;
+  width: 35px;
+}
+#fixtureawayimage{
+  margin: auto;
+  height: 35px;
+  width: 35px;
+}
+
+#fixturehomeimageteam{
+  margin: auto;
   height: 350px;
   width: 350px;
 }
-#fixtureawayimage{
+#fixtureawayimageteam{
   margin: auto;
   height: 350px;
   width: 350px;

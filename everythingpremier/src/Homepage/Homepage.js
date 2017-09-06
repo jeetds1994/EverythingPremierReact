@@ -14,10 +14,10 @@ class Homepage extends React.Component{
   }
 
   componentDidMount(){
-    fetch('http://localhost:3000/teams')
+    fetch('https://everythingpremierapi.herokuapp.com/teams/')
     .then(resp => resp.json())
     .then(teamData => this.setState({ teamData },
-    () => fetch('http://localhost:3000/fixtures')
+    () => fetch('https://everythingpremierapi.herokuapp.com/fixtures/')
     .then(resp => resp.json())
     .then(fixtures => {
       let teamData = this.state.teamData

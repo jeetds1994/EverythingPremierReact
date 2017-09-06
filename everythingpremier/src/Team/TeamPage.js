@@ -21,10 +21,10 @@ class TeamPage extends React.Component{
   }
 
   componentDidMount(){
-    let pageID = window.location.href.replace("http://localhost:3001/teams/", "") //the 10 is base number system
-    if(window.location.href.includes("http://localhost:3001/teams/")){
+    let pageID = window.location.href.replace("https://everythingpremier.herokuapp.com/teams/", "") //the 10 is base number system
+    if(window.location.href.includes("https://everythingpremier.herokuapp.com/teams/")){
 
-    let url = "http://localhost:3000/teams/" + pageID
+    let url = "https://everythingpremierapi.herokuapp.com/teams/" + pageID
     fetch(url).then(resp => resp.json())
     .then(teamData => {
       teamData.matches.map((fixture) => {
@@ -53,43 +53,32 @@ class TeamPage extends React.Component{
       .then(videos => this.setState({videos}))
     })
   }else{
-    window.location = "http://localhost:3001"
+    window.location = "https://everythingpremier.herokuapp.com/"
   }
   }
 
   render(){
     return(
       <div id="teamPage">
-
-
           <div id="surroundContainer">
             <div id="view1">
               <div className="ui two column grid">
-
                 <div className="column eight wide">
                   <img id="teamLogo" src={this.state.teamData.image_url} alt={this.state.teamData.name}/>
                 </div>
-
                 <div className="column eight wide">
                   <TeamInfo teamName={this.state.teamData.name} bio={this.state.teamData.bio}/>
                 </div>
-
               </div>
             </div>
-
             <div id="view2">
                 <Matches home_games={this.state.home_games} away_games={this.state.away_games} matches={this.state.matches}/>
             </div>
-
             <div id="view3">
               <Goals videos={this.state.videos} />
             </div>
 
-
           </div>
-
-
-
       </div>
     )
   }

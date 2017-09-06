@@ -13,10 +13,10 @@ class PlayerPage extends React.Component{
   }
 
   componentDidMount(){
-    let pageID = window.location.href.replace("http://localhost:3001/players/", "") //the 10 is base number system
-    if(window.location.href.includes("http://localhost:3001/players/")){
+    let pageID = window.location.href.replace("https://everythingpremier.herokuapp.com/players/", "") //the 10 is base number system
+    if(window.location.href.includes("https://everythingpremier.herokuapp.com/players")){
 
-    let url = "http://localhost:3000/players/" + pageID
+    let url = "https://everythingpremierapi.herokuapp.com/players/" + pageID
     fetch(url).then(resp => resp.json())
     .then(data => {
       this.setState({
@@ -26,7 +26,7 @@ class PlayerPage extends React.Component{
       })
     })
     }else{
-      window.location = "http://localhost:3001"
+      window.location = "https://everythingpremier.herokuapp.com/"
     }
   }
 
@@ -59,23 +59,3 @@ class PlayerPage extends React.Component{
   }
 }
 export default PlayerPage
-
-
-// <div className="row">
-//     <div className="column four wide" id="column1">
-//       <PlayerInfo player={this.state.player}/>
-//     </div>
-//
-//     <div className="column one wide"></div>
-//
-//     <div className="column five wide" id="column2">
-//       <h1>{this.state.player.name}</h1>
-//     </div>
-//     <div className="row">
-//
-//     </div>
-//
-//   <div className="column" id="stats">
-//     <Stats stats={this.state.stats}/>
-//   </div>
-// </div>

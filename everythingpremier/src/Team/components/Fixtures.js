@@ -24,7 +24,7 @@ const Fixtures = ({home_games, away_games, matches}) => {
       <div id="matchesTile">
       <div className="ui two column grid">
         <div className="column seven wide">
-          <img id="fixturehomeimage" src={match.hometeamimage}/>
+          <img id="fixturehomeimageteam" src={match.hometeamimage}/>
           <h2>{match.hometeam}</h2>
         </div>
 
@@ -34,7 +34,7 @@ const Fixtures = ({home_games, away_games, matches}) => {
         </div>
 
         <div className="column seven wide">
-          <img id="fixtureawayimage" src={match.awayteamimage}/>
+          <img id="fixtureawayimageteam" src={match.awayteamimage}/>
           <h2>{match.awayteam}</h2>
         </div>
       </div>
