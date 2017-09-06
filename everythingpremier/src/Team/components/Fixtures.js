@@ -6,7 +6,7 @@ import Slider from 'react-slick'
 const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
+      speed: 700,
       slidesToShow: 1,
       slidesToScroll: 3,
       autoplay: true,

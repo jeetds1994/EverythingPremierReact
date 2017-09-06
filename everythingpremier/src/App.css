@@ -62,8 +62,9 @@
 }
 
 #view2{
-  min-height:900px;
-  background-color: blue;
+  min-height:1500px;
+  color: white;
+  background-color: black;
 }
 
 
@@ -72,6 +73,10 @@
 
 }
 
+#highlights{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 
 #column1home{
   position: relative;
