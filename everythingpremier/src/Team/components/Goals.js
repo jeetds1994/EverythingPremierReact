@@ -7,27 +7,29 @@ import Slider from 'react-slick'
 const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
+      speed: 700,
       slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      pauseOnHover: true
     };
-
 
 const Goals = ({videos}) => {
     let goals = videos.map((video, index) => {
       return(
-        <div id="matchesTile">
+        <div>
           <ReactPlayer url={video.url} controls/>
         </div>
       )
     })
   return(
-    <div id="highlights">
+      <div>
       <h1>Highlights:</h1>
-      <Slider {...settings}>
-        {goals}
-      </Slider>
-    </div>
+        <Slider {...settings}>
+          {goals}
+        </Slider>
+      </div>
   )
 }
 

@@ -78,11 +78,11 @@ class TeamPage extends React.Component{
             </div>
 
             <div id="view2">
+                <Matches home_games={this.state.home_games} away_games={this.state.away_games} matches={this.state.matches}/>
+            </div>
 
-              <Matches home_games={this.state.home_games} away_games={this.state.away_games} matches={this.state.matches}/>
-              
+            <div id="view3">
               <Goals videos={this.state.videos} />
-
             </div>
 
 
