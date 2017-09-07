@@ -21,8 +21,8 @@ class TeamPage extends React.Component{
   }
 
   componentDidMount(){
-    let pageID = window.location.href.replace("http://localhost:3000/teams/", "") //the 10 is base number system
-    if(window.location.href.includes("http://localhost:3000/teams/")){
+    let pageID = window.location.href.replace("https://everythingpremier.herokuapp.com/teams/", "") //the 10 is base number system
+    if(window.location.href.includes("https://everythingpremier.herokuapp.com/teams/")){
     Adapter.fetchTeams(pageID)
     .then(teamData => {
       teamData.matches.map((fixture) => {
