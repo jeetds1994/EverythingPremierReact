@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid, Image } from 'semantic-ui-react'
 
 
+
 const Player = ({player}) => {
   var find = ' ';
   var re = new RegExp(find, 'g');
@@ -9,8 +10,14 @@ const Player = ({player}) => {
 
   return (
     <Grid.Column>
-        <Image src={player.image_url} />
-        <a href={url}><li>{player.name}</li></a>
+
+        <Image
+          src={player.image_url}
+          as='a'
+          size='medium'
+          href='http://google.com'
+          target='_blank'
+        />
     </Grid.Column>
   )
 }
