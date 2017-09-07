@@ -23,7 +23,7 @@ class TeamPage extends React.Component{
   componentDidMount(){
     let pageID = window.location.href.replace("https://everythingpremier.herokuapp.com/teams/", "") //the 10 is base number system
     if(window.location.href.includes("https://everythingpremier.herokuapp.com/teams/")){
-    let url = "https://everythingpremier.herokuapp.com/teams/" + pageID
+    let url = "https://everythingpremierapi.herokuapp.com/teams/" + pageID
     fetch(url).then(resp => resp.json())
     .then(teamData => {
       teamData.matches.map((fixture) => {
