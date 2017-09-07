@@ -21,8 +21,8 @@ class TeamPage extends React.Component{
   }
 
   componentDidMount(){
-    let pageID = window.location.href.replace("https://everythingpremierapi.herokuapp.com/teams/", "") //the 10 is base number system
-    if(window.location.href.includes("https://everythingpremierapi.herokuapp.com/teams/")){
+    let pageID = window.location.href.replace("https://everythingpremier.herokuapp.com/teams/", "") //the 10 is base number system
+    if(window.location.href.includes("https://everythingpremier.herokuapp.com/teams/")){
     let url = "https://everythingpremier.herokuapp.com/teams/" + pageID
     fetch(url).then(resp => resp.json())
     .then(teamData => {
