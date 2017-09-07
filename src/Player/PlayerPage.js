@@ -1,6 +1,7 @@
 import React from 'react'
 import Stats from './components/Stats'
 import PlayerInfo from './components/PlayerInfo'
+import Adapter from './Adapters/Adapter'
 
 class PlayerPage extends React.Component{
   constructor(){
@@ -13,11 +14,10 @@ class PlayerPage extends React.Component{
   }
 
   componentDidMount(){
-    let pageID = window.location.href.replace("https://everythingpremier.herokuapp.com/players/", "") //the 10 is base number system
-    if(window.location.href.includes("https://everythingpremier.herokuapp.com/players")){
+    let pageID = window.location.href.replace("http://localhost:3000/players/", "") //the 10 is base number system
+    if(window.location.href.includes("http://localhost:3000/players")){
 
-    let url = "https://everythingpremierapi.herokuapp.com/players/" + pageID
-    fetch(url).then(resp => resp.json())
+    Adapter.fetchPlayer(pageID)
     .then(data => {
       this.setState({
         pageID: pageID,
