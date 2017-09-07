@@ -50,12 +50,11 @@ class Homepage extends React.Component{
 
       <div className="ui four column grid">
         <div className="row">
-            <div className="column four wide" id="column1home">
+            <div className="column six wide" id="column1home">
               {/* Standings */}
               <Standings standings={this.state.teamData}/>
               </div>
-              <div className="column one wide"></div>
-              <div className="column eleven wide" id="column2">
+              <div className="column ten wide" id="column2">
                 {/* Fixtures */}
                 <Fixtures teamData={this.state.teamData} fixtures={this.state.fixtures}/>
                 {/* TeamGrid */}

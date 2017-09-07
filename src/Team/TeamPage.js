@@ -21,9 +21,8 @@ class TeamPage extends React.Component{
   }
 
   componentDidMount(){
-    let pageID = window.location.href.replace("https://everythingpremier.herokuapp.com/teams/", "") //the 10 is base number system
-    if(window.location.href.includes("https://everythingpremier.herokuapp.com/teams/")){
-
+    let pageID = window.location.href.replace("http://localhost:3000/teams/", "") //the 10 is base number system
+    if(window.location.href.includes("http://localhost:3000/teams/")){
     let url = "https://everythingpremierapi.herokuapp.com/teams/" + pageID
     fetch(url).then(resp => resp.json())
     .then(teamData => {
@@ -47,7 +46,7 @@ class TeamPage extends React.Component{
     .then(() => {
       var find = ' ';
       var re = new RegExp(find, 'g');
-      let url = "http://goalposts-api.herokuapp.com/api/v1/highlights/search?title=" + this.state.teamData.name.toLowerCase().replace("fc", "")
+      let url = "https://goalposts-api.herokuapp.com/api/v1/highlights/search?title=" + this.state.teamData.name.toLowerCase().replace("fc", "")
       fetch(url)
       .then(resp => resp.json())
       .then(videos => this.setState({videos}))
@@ -76,6 +75,9 @@ class TeamPage extends React.Component{
             </div>
             <div id="view3">
               <Goals videos={this.state.videos} />
+            </div>
+            <div id="view4">
+              <Players players={this.state.players}/>
             </div>
 
           </div>

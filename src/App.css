@@ -104,7 +104,7 @@
 
 #teamLogo{
   height: 700px;
-  width: 700px;
+  width: auto;
 }
 
 #playerview2{
@@ -131,13 +131,14 @@
   height: 400px;
   width: 100%;
   padding-top: 17px;
+  padding-left: 50px;
   padding-bottom: 20px;
 }
 
 
 #team_grid{
   padding-top: 30px;
-  padding-left: 17px;
+  padding-left: 50px;
 }
 
 .standing_logos{
