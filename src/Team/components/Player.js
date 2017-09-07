@@ -8,6 +8,8 @@ const Player = ({player}) => {
   var re = new RegExp(find, 'g');
   let url = "https://everythingpremier.herokuapp.com/players/" + player.name.toLowerCase().replace(re, '');
 
+  if(player.image_url === null){ player.image_url = "http://fynanc.com/wp-content/uploads/2016/08/batman-for-facebook.jpg"}
+  
   return (
     <Grid.Column>
     <div id="cardContainer">
