@@ -3,6 +3,7 @@ import Fixtures from './components/Fixtures'
 import Standings from './components/Standings'
 import TeamGrid from './components/TeamGrid'
 import Search from './components/Search'
+import Adapter from './Adapters/Adapter'
 
 class Homepage extends React.Component{
   constructor(){
@@ -14,11 +15,10 @@ class Homepage extends React.Component{
   }
 
   componentDidMount(){
-    fetch('https://everythingpremierapi.herokuapp.com/teams/')
-    .then(resp => resp.json())
+
+    Adapter.fetchTeams()
     .then(teamData => this.setState({ teamData },
-    () => fetch('https://everythingpremierapi.herokuapp.com/fixtures/')
-    .then(resp => resp.json())
+    () => Adapter.fetchFixtures()
     .then(fixtures => {
       let teamData = this.state.teamData
       fixtures.map(fixture => {

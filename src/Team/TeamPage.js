@@ -3,7 +3,7 @@ import TeamInfo from './components/TeamInfo'
 import Matches from './components/Fixtures'
 import Players from './components/Players'
 import Goals from './components/Goals'
-
+import Adapter from './Adapters/Adapter'
 
 class TeamPage extends React.Component{
   constructor(){
@@ -23,8 +23,7 @@ class TeamPage extends React.Component{
   componentDidMount(){
     let pageID = window.location.href.replace("http://localhost:3000/teams/", "") //the 10 is base number system
     if(window.location.href.includes("http://localhost:3000/teams/")){
-    let url = "https://everythingpremierapi.herokuapp.com/teams/" + pageID
-    fetch(url).then(resp => resp.json())
+    Adapter.fetchTeams(pageID)
     .then(teamData => {
       teamData.matches.map((fixture) => {
         fixture["hometeam"] = teamData.teams.find(team => team.id === parseInt(fixture.home_team_id, 10)).name
@@ -46,10 +45,7 @@ class TeamPage extends React.Component{
     .then(() => {
       var find = ' ';
       var re = new RegExp(find, 'g');
-      let url = "https://goalposts-api.herokuapp.com/api/v1/highlights/search?title=" + this.state.teamData.name.toLowerCase().replace("fc", "")
-      fetch(url)
-      .then(resp => resp.json())
-      .then(videos => this.setState({videos}))
+      Adapter.fetchGoals(this.state.teamData.name.toLowerCase().replace("fc", "")).then(videos => this.setState({videos}))
     })
   }else{
     window.location = "https://everythingpremier.herokuapp.com/"
