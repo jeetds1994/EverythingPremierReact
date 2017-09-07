@@ -7,7 +7,7 @@ import * as dimple from 'dimple';
 class Stats extends React.Component{
 
   componentWillReceiveProps(nextProps){
-
+      if(nextProps.stats){
       let objKeys = Object.keys(nextProps.stats)
       let objValues = Object.values(nextProps.stats)
 
@@ -32,6 +32,7 @@ class Stats extends React.Component{
       chart.addMeasureAxis("x", "Stat");
       chart.addSeries(null, dimple.plot.bar);
       chart.draw();
+    }
   }
   render(){
     return(

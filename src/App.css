@@ -61,6 +61,24 @@
   min-height:900px;
 }
 
+#cardContainer{
+  height: 350px;
+  width: 350px;
+  margin: auto;
+
+}
+
+#playerCard{
+  margin: auto;
+  height: 175px;
+  width: 175px;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-bottom: 25px;
+  padding-right: 25px;
+}
+
+
 #view2{
   min-height:600px;
   color: white;

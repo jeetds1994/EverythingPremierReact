@@ -10,14 +10,18 @@ const Player = ({player}) => {
 
   return (
     <Grid.Column>
-
-        <Image
+    <div id="cardContainer">
+      <div id="playerCard">
+        <Image id="playerCardimg"
           src={player.image_url}
           as='a'
           size='medium'
-          href='http://google.com'
+          href={url}
           target='_blank'
         />
+        <h2>{player.name}</h2>
+      </div>
+      </div>
     </Grid.Column>
   )
 }
