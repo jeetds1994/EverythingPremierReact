@@ -48,6 +48,11 @@
   text-align: center;
 }
 
+#leagueList{
+  height: 1000px;
+  background-color: green;
+}
+
 #motto{
   font-weight: bold;
   font-style: italic;
@@ -59,6 +64,11 @@
 #view1{
   background-color: black;
   min-height:900px;
+}
+
+#lock{
+  width: 100px;
+  height: 100px;
 }
 
 #cardContainer{

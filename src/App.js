@@ -6,6 +6,8 @@ import Homepage from './Homepage/Homepage';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import TeamPage from './Team/TeamPage';
 import PlayerPage from './Player/PlayerPage';
+import FantasyLoginPage from './FantasyLogin/FantasyLoginPage'
+import DashboardPage from './Dashboard/DashboardPage'
 
 
 
@@ -28,6 +30,8 @@ class App extends Component {
           <Route exact path="/" render={() => <Homepage />} />
           <Route path="/teams" render={() => <TeamPage />} />
           <Route path="/players" render={() => <PlayerPage />} />
+          <Route exact path="/login" render={() => <FantasyLoginPage />} />
+          <Route exact path="/dashboard" render={() => <DashboardPage />} />
        </div>
       </Router>
       </div>
