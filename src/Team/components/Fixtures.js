@@ -8,9 +8,9 @@ const settings = {
       infinite: true,
       speed: 700,
       slidesToShow: 1,
-      slidesToScroll: 3,
+      slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 5000,
       pauseOnHover: true
     };
 

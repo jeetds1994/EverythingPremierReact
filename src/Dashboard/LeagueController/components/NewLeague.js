@@ -30,7 +30,7 @@ class NewLeague extends React.Component {
     data.append("league_name", this.state.leagueName)
     data.append("squad_name", this.state.squadName)
     data.append("image_url", this.state.profilePicURL)
-    fetch('http://localhost:3000/api/v1/leagues/new', {
+    fetch('https://everythingpremierapi.herokuapp.com/api/v1/leagues/new', {
       method: 'POST',
       headers: {Authorization: `Bearer ${localStorage.getItem('jwt')}`},
       body: data

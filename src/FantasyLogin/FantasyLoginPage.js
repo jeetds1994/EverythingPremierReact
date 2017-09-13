@@ -23,7 +23,7 @@ class FantasyLoginPage extends React.Component{
     let data = new FormData()
     data.append("username", this.state.username);
     data.append("password", this.state.password);
-    fetch('http://localhost:3000/api/v1/login/',{
+    fetch('https://everythingpremierapi.herokuapp.com/api/v1/login/',{
       method: 'POST',
       body: data
     }).then(resp => resp.json())
@@ -57,7 +57,7 @@ class FantasyLoginPage extends React.Component{
       let data = new FormData()
       data.append("username", this.state.username)
       data.append("password", this.state.password)
-      fetch('http://localhost:3000/api/v1/signup', {
+      fetch('https://everythingpremierapi.herokuapp.com/api/v1/signup', {
         method: 'POST',
         body: data
       }).then(resp => resp.json())

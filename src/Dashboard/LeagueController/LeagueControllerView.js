@@ -1,5 +1,4 @@
 import React from 'react'
-import Matches from './components/Matches'
 import Players from './components/Players'
 import NewLeague from './components/NewLeague'
 import LockedLeagueView from './LockedLeague/LockedLeagueView'
@@ -15,22 +14,22 @@ class LeagueControllerView extends React.Component{
       squad: [],
       players: [],
     }
+    this.fetchMatches = this.fetchMatches.bind(this)
   }
 
   componentWillReceiveProps(nextProps){
     if(nextProps.selectedLeague !== ""){
       if(nextProps.selectedLeagueLocked){
-
+        this.fetchMatches(nextProps.selectedLeague)
+        this.fetchPlayers(nextProps.selectedLeague)
       }else{
         this.fetchAllPlayers()
-        // this.fetchMatches(nextProps.selectedLeague)
-        // this.fetchPlayers(nextProps.selectedLeague)
       }
     }
   }
 
   fetchAllPlayers = () => {
-    let url = 'http://localhost:3000/players'
+    let url = 'https://everythingpremierapi.herokuapp.com/players'
     fetch(url, {
       method: 'GET',
       headers: {Authorization: `Bearer ${localStorage.getItem('jwt')}`},
@@ -40,13 +39,17 @@ class LeagueControllerView extends React.Component{
     })
   }
 
-  fetchMatches = () =>{
-    let url = 'http://localhost:3000/api/v1/leagues/'
+  fetchMatches = (selectedLeague) =>{
+    let url = 'https://everythingpremierapi.herokuapp.com/api/v1/leagues/matches'
+    let data = new FormData()
+    data.append("league_id", selectedLeague.id)
     fetch(url, {
-      method: 'GET',
+      method: 'POST',
       headers: {Authorization: `Bearer ${localStorage.getItem('jwt')}`},
+      body: data
     }).then(resp => resp.json())
     .then(data => {
+      debugger
       this.setState({
         league: data.league,
         squad: data.squad,
@@ -56,7 +59,7 @@ class LeagueControllerView extends React.Component{
   }
 
   fetchPlayers = (leagueID) => {
-    let url = 'http://localhost:3000/api/v1/squads/' + leagueID
+    let url = 'https://everythingpremierapi.herokuapp.com/api/v1/squads/' + leagueID.id
     fetch(url, {
       method: 'GET',
       headers: {Authorization: `Bearer ${localStorage.getItem('jwt')}`},
@@ -80,8 +83,8 @@ class LeagueControllerView extends React.Component{
       {this.props.selectedLeague === "" && <h1>{message}</h1>}
       {this.props.selectedLeague !== "" &&
         <div>
-          {this.props.selectedLeagueLocked && <LockedLeagueView />}
-          {!this.props.selectedLeagueLocked && <UnlockedLeagueView players={this.state.players}/>}
+          {this.props.selectedLeagueLocked && <LockedLeagueView players={this.state.players} matches={this.state.matches}/>}
+          {!this.props.selectedLeagueLocked && <UnlockedLeagueView players={this.state.players} league={this.props.selectedLeague} userData={this.props.userData}/>}
         </div>}
 
       </div>
