@@ -14,7 +14,7 @@ class FantasyLoginPage extends React.Component{
 
   componentDidMount(){
     if(!!localStorage.getItem("jwt")){
-      window.location = "http://localhost:3001/dashboard"
+      window.location = "https://everythingpremier.herokuapp.com/dashboard"
     }
   }
 
