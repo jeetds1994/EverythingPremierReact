@@ -1,5 +1,6 @@
 import React from 'react'
 import Autosuggest from 'react-autosuggest';
+import { Button } from 'semantic-ui-react'
 
 // When suggestion is clicked, Autosuggest needs to populate the input
 // based on the clicked suggestion. Teach Autosuggest how to calculate the
@@ -89,6 +90,9 @@ class Search extends React.Component {
         renderSuggestion={renderSuggestion}
         inputProps={inputProps}
       />
+      <button className="white-button">
+      <a href="#column1home"> Click here </a>
+      </button>
       </div>
     );
   }

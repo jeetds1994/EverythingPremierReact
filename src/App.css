@@ -14,6 +14,10 @@
   color: white;
 }
 
+.white-button {
+  background:#fff;
+}
+
 .App-intro {
   font-size: large;
 }

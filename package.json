@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "d3": "^4.10.2",
+    "d3": "3.5.17",
     "dimple": "git+https://github.com/PMSI-AlignAlytics/dimple.git",
     "dimple-js": "^2.1.4",
     "react": "^15.6.1",

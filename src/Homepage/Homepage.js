@@ -5,6 +5,8 @@ import TeamGrid from './components/TeamGrid'
 import Search from './components/Search'
 import Adapter from './Adapters/Adapter'
 
+
+
 class Homepage extends React.Component{
   constructor(){
     super()
@@ -42,6 +44,8 @@ class Homepage extends React.Component{
             <img id="logo" src="/logo_white.svg" alt="logo"/>
             <h1 id="motto">For quick info about the Barclays Premier League.</h1>
             <Search teamData={this.state.teamData}/>
+
+
           <div>
 
           </div>
