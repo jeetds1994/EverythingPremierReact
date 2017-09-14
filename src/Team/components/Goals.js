@@ -8,12 +8,11 @@ const settings = {
       infinite: true,
       speed: 700,
       slidesToShow: 3,
-      slidesToScroll: 3
+      slidesToScroll: 1
     };
 
 const Goals = ({videos}) => {
     let goals = videos.map((video, index) => {
-      console.log("MAPPING VID")
       return(
         <div key={index}>
           <ReactPlayer data-index={index} url={video.url} controls width={400} height={400}/>
