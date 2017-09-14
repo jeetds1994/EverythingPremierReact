@@ -33,6 +33,12 @@
   padding-top: 270px;
 }
 
+#godown{
+  padding-top: 30px;
+  width: 100px;
+  height: 50px;
+}
+
 #background{
   flex-shrink: 0;
   min-width: 100%;

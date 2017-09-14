@@ -14,8 +14,8 @@ class PlayerPage extends React.Component{
   }
 
   componentDidMount(){
-    let pageID = window.location.href.replace("https://everythingpremier.herokuapp.com//players/", "") //the 10 is base number system
-    if(window.location.href.includes("https://everythingpremier.herokuapp.com//players/")){
+    let pageID = window.location.href.replace("https://everythingpremier.herokuapp.com/players/", "") //the 10 is base number system
+    if(window.location.href.includes("https://everythingpremier.herokuapp.com/players/")){
 
     Adapter.fetchPlayer(pageID)
     .then(data => {

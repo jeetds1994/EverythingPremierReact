@@ -69,6 +69,10 @@ class Search extends React.Component {
     });
   };
 
+  doDown = () => {
+    window.location = "https://everythingpremier.herokuapp.com/" + "#column1home"
+  }
+
   render() {
     const { value, suggestions } = this.state;
 
@@ -90,9 +94,7 @@ class Search extends React.Component {
         renderSuggestion={renderSuggestion}
         inputProps={inputProps}
       />
-      <button className="white-button">
-      <a href="#column1home"> Click here </a>
-      </button>
+      <img src="http://www.pngmart.com/files/3/Down-Arrow-PNG-File.png" onClick={this.doDown} id="godown" />
       </div>
     );
   }
