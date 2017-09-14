@@ -9,12 +9,12 @@ const Player = ({player}) => {
   let url = "https://everythingpremier.herokuapp.com/players/" + player.name.toLowerCase().replace(re, '');
 
   if(player.image_url === null){ player.image_url = "http://fynanc.com/wp-content/uploads/2016/08/batman-for-facebook.jpg"}
-  
+
   return (
     <Grid.Column>
     <div id="cardContainer">
       <div id="playerCard">
-        <Image id="playerCardimg"
+        <Image id="playerCardimg" className="needsPointer"
           src={player.image_url}
           as='a'
           size='medium'
