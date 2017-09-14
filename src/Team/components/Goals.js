@@ -15,8 +15,8 @@ const Goals = ({videos}) => {
     let goals = videos.map((video, index) => {
       console.log("MAPPING VID")
       return(
-        <div>
-          <ReactPlayer key={index} data-index={index} url={video.url} controls width={400} height={400}/>
+        <div key={index}>
+          <ReactPlayer data-index={index} url={video.url} controls width={400} height={400}/>
         </div>
       )
     })
