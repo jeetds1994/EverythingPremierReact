@@ -18,6 +18,7 @@ class DashboardPage extends React.Component{
     this.onLeagueClick = this.onLeagueClick.bind(this)
   }
 
+  //sets jwt token in localStorage
   componentDidMount(){
     let jwt = localStorage.getItem("jwt")
     console.log(jwt)
@@ -26,6 +27,7 @@ class DashboardPage extends React.Component{
     }
   }
 
+  //get leagues data and user data.
   getInfo = (jwt) =>{
     fetch(`https://everythingpremierapi.herokuapp.com/api/v1/leagues`,{
       method: "GET",
@@ -38,7 +40,7 @@ class DashboardPage extends React.Component{
       })
     })
 }
-
+  //on league click handler
   onLeagueClick = (event) => {
     let val = event.target.value
     let selectedLeague = this.state.leagues.find(league => league.id === val)
@@ -50,6 +52,7 @@ class DashboardPage extends React.Component{
     this.setState({addLeagueTriggered: !this.state.addLeagueTriggered})
   }
 
+  //sends request to join a league
   joinLeague = (event) => {
     let val = event.currentTarget.elements[0].value
     let data = new FormData()

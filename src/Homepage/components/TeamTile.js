@@ -4,7 +4,7 @@ import { Card, Icon, Image } from 'semantic-ui-react'
 
 const TeamTile = ({team}) => {
   console.log(team)
-
+  //add links to each team to their own page
   var find = ' ';
   var re = new RegExp(find, 'g');
   let url = "https://everythingpremier.herokuapp.com/teams/" + team.name.toLowerCase().replace(re, '');

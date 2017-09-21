@@ -13,6 +13,7 @@ class PlayerPage extends React.Component{
     }
   }
 
+  //fetch individual player data from url
   componentDidMount(){
     let pageID = window.location.href.replace("https://everythingpremier.herokuapp.com/players/", "") //the 10 is base number system
     if(window.location.href.includes("https://everythingpremier.herokuapp.com/players/")){

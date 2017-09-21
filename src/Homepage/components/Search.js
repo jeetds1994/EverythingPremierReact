@@ -19,12 +19,6 @@ const renderSuggestion = suggestion => (
 class Search extends React.Component {
   constructor() {
     super();
-
-    // Autosuggest is a controlled component.
-    // This means that you need to provide an input value
-    // and an onChange handler that updates this value (see below).
-    // Suggestions also need to be provided to the Autosuggest,
-    // and they are initially empty because the Autosuggest is closed.
     this.state = {
       value: '',
       suggestions: [],
@@ -38,6 +32,7 @@ class Search extends React.Component {
     })
   }
 
+  //get suggestions from search
   getSuggestions = value => {
     const inputValue = value.trim().toLowerCase();
     const inputLength = inputValue.length;

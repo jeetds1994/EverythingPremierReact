@@ -17,7 +17,7 @@ class Homepage extends React.Component{
   }
 
   componentDidMount(){
-
+    //call Adapter to fetch team data, and fixtures
     Adapter.fetchTeams()
     .then(teamData => this.setState({ teamData },
     () => Adapter.fetchFixtures()
